@@ -8,12 +8,15 @@ import {
 
 import Dashboard from './pages/Dashboard/Dashboard';
 import TicketDetail from './pages/TicketDetail/TicketDetail';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <Router>
       <div className="App">
+        <Navbar />
         <div className="container">
+
           <Switch>
             <Route path="/dashboard">
               <Dashboard />
