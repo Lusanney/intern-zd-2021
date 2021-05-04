@@ -10,3 +10,9 @@ export const getAllTicketsAPI = async (perPage, page) => {
 
   return response;
 };
+
+export const getTicketByIdAPI = async (id) => {
+  const response = await axios.get(`/api/v1/tickets/${id}`);
+
+  return response;
+};
