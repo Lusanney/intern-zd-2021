@@ -7,14 +7,14 @@ const TicketTable = () => {
   const [getTickets, setTickets] = useState([]);
   const [getCurrentPage, setCurrentPage] = useState(1);
   const [getLastPage, setLastPage] = useState(1);
-  const perPage = 10;
+  const perPage = 25;
 
   useEffect(() => {
     getAllTicketsAPI(perPage, getCurrentPage)
       .then((response) => {
         if (response.data) {
           setTickets(response.data.tickets);
-          setLastPage(response.data.count / perPage);
+          setLastPage(Math.floor((response.data.count - 1) / perPage) + 1);
         }
       });
   }, [getCurrentPage]);

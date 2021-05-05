@@ -175,3 +175,68 @@ describe("/tickets - Get All tickets suite", () => {
     expect(response.body.message).toBe("Fields must be integer from 1 onward");
   });
 });
+
+describe("/tickets/:id - Get Ticket By ID suite", () => {
+  const prefixURL = "/api/v1/tickets";
+
+  it("[Expected] GET /tickets/:id : Should return correct ticket", async () => {
+    expect.hasAssertions();
+
+    const ticketId = "/3";
+    const response = await request.get(prefixURL + ticketId);
+
+    expect(response.status).toBe(StatusCodes.OK);
+    expect(response.body.ticket).not.toBeNull();
+    expect(response.body.ticket.id).toBe(3);
+    expect(response.body.ticket.subject).toBe(
+      "excepteur laborum ex occaecat Lorem"
+    );
+  });
+
+  it("[Expected] GET /tickets/:id : Should return correct ticket", async () => {
+    expect.hasAssertions();
+
+    const ticketId = "/44";
+    const response = await request.get(prefixURL + ticketId);
+
+    expect(response.status).toBe(StatusCodes.OK);
+    expect(response.body.ticket).not.toBeNull();
+    expect(response.body.ticket.id).toBe(44);
+    expect(response.body.ticket.subject).toBe(
+      "velit in sit deserunt id"
+    );
+  });
+
+  it("[Error] GET /tickets/:id : Should return NOT FOUND", async () => {
+    expect.hasAssertions();
+
+    const ticketId = "/5000";
+    const response = await request.get(prefixURL + ticketId);
+
+    expect(response.status).toBe(StatusCodes.NOT_FOUND);
+    expect(response.body.ticket).toBeNull();
+    expect(response.body.error).toBe("RecordNotFound");
+  });
+
+  it("[Error] GET /tickets/:id : Should return NOT FOUND", async () => {
+    expect.hasAssertions();
+
+    const ticketId = "/0";
+    const response = await request.get(prefixURL + ticketId);
+
+    expect(response.status).toBe(StatusCodes.NOT_FOUND);
+    expect(response.body.ticket).toBeNull();
+    expect(response.body.error).toBe("RecordNotFound");
+  });
+
+  it("[Error] GET /tickets/:id : Should return error", async () => {
+    expect.hasAssertions();
+
+    const ticketId = "/-5";
+    const response = await request.get(prefixURL + ticketId);
+
+    expect(response.status).toBe(StatusCodes.BAD_REQUEST);
+    expect(response.body.ticket).toBeNull();
+    expect(response.body.message).toBe("Fields must be from 0 onward");
+  });
+});
