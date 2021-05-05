@@ -6,7 +6,7 @@ import { formatDate, badgeBg } from '../../utils';
 const Table = ({ tickets }) => {
   const history = useHistory();
   return (
-    <table className="table table-hover ticket-table">
+    <table className="table table-hover" id="ticket-table">
       <thead>
         <tr>
           <th scope="col">ID</th>
