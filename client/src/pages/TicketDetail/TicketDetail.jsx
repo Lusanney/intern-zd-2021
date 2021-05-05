@@ -17,7 +17,8 @@ const TicketDetail = () => {
   });
 
   return (
-    <section className="TicketDetail">
+    <section className="TicketDetail mt-5">
+
       <div className="row">
         <h2>{getTicket.subject}</h2>
       </div>
