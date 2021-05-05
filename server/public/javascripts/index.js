@@ -1,5 +1,0 @@
-$('#loginForm')
-
-function loginForm(form){
-    
-}

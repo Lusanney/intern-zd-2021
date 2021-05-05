@@ -7,7 +7,7 @@ const request = supertest(app);
 describe("/tickets - Get All tickets suite", () => {
   const prefixURL = "/api/v1/tickets";
 
-  it("[Expected] GET /tickets: Should return all tickets", async () => {
+  it("[HAPPY PATH] GET /tickets: Should return all tickets", async () => {
     expect.hasAssertions();
 
     const response = await request.get(prefixURL);
@@ -27,7 +27,7 @@ describe("/tickets - Get All tickets suite", () => {
     expect(response.body.previous_page).toBeNull();
   });
 
-  it("[Expected] GET /tickets?page=2: Should return all tickets at page 2", async () => {
+  it("[HAPPY PATH] GET /tickets?page=2: Should return all tickets at page 2", async () => {
     expect.hasAssertions();
 
     const params = "?page=2";
@@ -49,7 +49,7 @@ describe("/tickets - Get All tickets suite", () => {
     );
   });
 
-  it("[Edge] GET /tickets?page=4: Should return all tickets at page 4", async () => {
+  it("[HAPPY PATH] GET /tickets?page=4: Should return all tickets at page 4", async () => {
     expect.hasAssertions();
 
     const params = "?page=4";
@@ -135,7 +135,7 @@ describe("/tickets - Get All tickets suite", () => {
     expect(response.body.message).toBe("Fields must be integer from 1 onward");
   });
 
-  it("[Expected] GET /tickets?perPage=10&page=10: Should return all tickets at page 10 / per page 10", async () => {
+  it("[HAPPY PATH] GET /tickets?perPage=10&page=10: Should return all tickets at page 10 / per page 10", async () => {
     expect.hasAssertions();
 
     const params = "?perPage=10&page=10";
@@ -179,7 +179,7 @@ describe("/tickets - Get All tickets suite", () => {
 describe("/tickets/:id - Get Ticket By ID suite", () => {
   const prefixURL = "/api/v1/tickets";
 
-  it("[Expected] GET /tickets/:id : Should return correct ticket", async () => {
+  it("[HAPPY PATH] GET /tickets/:id : Should return correct ticket", async () => {
     expect.hasAssertions();
 
     const ticketId = "/3";
@@ -193,7 +193,7 @@ describe("/tickets/:id - Get Ticket By ID suite", () => {
     );
   });
 
-  it("[Expected] GET /tickets/:id : Should return correct ticket", async () => {
+  it("[HAPPY PATH] GET /tickets/:id : Should return correct ticket", async () => {
     expect.hasAssertions();
 
     const ticketId = "/44";

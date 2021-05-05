@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/App.css","webpack://src/components/TicketTable/Table.css"],"names":[],"mappings":"AAAA,WACE,WACF,CAEA,aACE,gBACF,CCNA,uBACE,cACF","file":"main.271b7b00.chunk.css","sourcesContent":["#loginForm {\r\n  width: 500px;\r\n}\r\n\r\n#inputDomain {\r\n  text-align: right;\r\n}\r\n",".ticket-table tbody tr {\r\n  cursor: pointer;\r\n}\r\n"]}
