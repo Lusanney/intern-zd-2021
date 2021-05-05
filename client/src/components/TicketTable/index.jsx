@@ -14,7 +14,7 @@ const TicketTable = () => {
       .then((response) => {
         if (response.data) {
           setTickets(response.data.tickets);
-          setLastPage(response.data.count / perPage);
+          setLastPage(Math.floor((response.data.count - 1) / perPage) + 1);
         }
       });
   }, [getCurrentPage]);
