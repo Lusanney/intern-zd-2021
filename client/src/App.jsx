@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
@@ -9,6 +8,7 @@ import {
 import Dashboard from './pages/Dashboard/Dashboard';
 import TicketDetail from './pages/TicketDetail/TicketDetail';
 import Navbar from './components/Navbar';
+import NotFoundPage from './pages/Error/404';
 
 function App() {
   return (
@@ -25,6 +25,10 @@ function App() {
             <Route path="/ticket/:ticketId">
               <TicketDetail />
             </Route>
+
+            <Route path="*">
+              <NotFoundPage />
+            </Route>
           </Switch>
         </div>
 
@@ -34,4 +38,4 @@ function App() {
   );
 }
 
-export default App;
+export default React.memo(App);

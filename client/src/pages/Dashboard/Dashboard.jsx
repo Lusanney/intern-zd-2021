@@ -8,4 +8,4 @@ const Dashboard = () => (
   </section>
 );
 
-export default Dashboard;
+export default React.memo(Dashboard);

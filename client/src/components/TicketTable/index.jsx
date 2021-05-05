@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { getAllTicketsAPI } from '../../apis/ticket.api';
 import Table from './Table';
-import Pagination from '../Pagination/index';
+import Pagination from '../Pagination';
+import ErrorBoundary from '../ErrorBoundary';
 
 const TicketTable = () => {
   const [getTickets, setTickets] = useState([]);
@@ -20,15 +21,15 @@ const TicketTable = () => {
   }, [getCurrentPage]);
 
   return (
-    <>
+    <ErrorBoundary>
       <Table tickets={getTickets} />
       <Pagination
         currentPage={getCurrentPage}
         lastPage={getLastPage}
         onPageClick={(page) => setCurrentPage(page)}
       />
-    </>
+    </ErrorBoundary>
   );
 };
 
-export default TicketTable;
+export default React.memo(TicketTable);

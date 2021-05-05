@@ -1,59 +1,33 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getTicketByIdAPI } from '../../apis/ticket.api';
-import { formatDate, badgeBg } from '../../utils';
+import ErrorBoundary from '../../components/ErrorBoundary';
+import TicketDetailView from './TicketDetail.view';
 
 const TicketDetail = () => {
   const { ticketId } = useParams();
   const [getTicket, setTicket] = useState({});
+  const [getLoading, setLoading] = useState(true);
 
   useEffect(() => {
+    setLoading(true);
     getTicketByIdAPI(ticketId)
       .then((response) => {
         if (response.data) {
           setTicket(response.data.ticket);
         }
+      })
+      .finally(() => {
+        setLoading(false);
       });
-  });
+  }, [ticketId]);
 
   return (
-    <section className="TicketDetail mt-5">
+    <ErrorBoundary>
+      <TicketDetailView ticket={getTicket} isLoading={getLoading} />
+    </ErrorBoundary>
 
-      <div className="row">
-        <h2>{getTicket.subject}</h2>
-      </div>
-
-      <div className="row">
-        <div className="col-md-4">
-          <div className="requester-group-badge">
-            Requester:
-            {' '}
-            {getTicket.requester_id}
-            <span className={`badge rounded-pill ms-3 px-4 ${badgeBg(getTicket.status)}`}>
-              {getTicket.status}
-            </span>
-          </div>
-          <div className="status-badge" />
-
-        </div>
-
-        <div className="col">
-          Created:
-          {' '}
-          {formatDate(getTicket.created_at)}
-        </div>
-      </div>
-
-      <div className="row mt-3">
-        <div className="col-6">
-          <b>Description</b>
-          <p style={{ textJustify: 'auto' }}>{getTicket.description}</p>
-        </div>
-
-      </div>
-
-    </section>
   );
 };
 
-export default TicketDetail;
+export default React.memo(TicketDetail);

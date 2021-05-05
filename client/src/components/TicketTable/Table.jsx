@@ -6,7 +6,7 @@ import { formatDate, badgeBg } from '../../utils';
 const Table = ({ tickets }) => {
   const history = useHistory();
   return (
-    <table className="table table-hover" id="ticket-table">
+    <table className="table table-hover ticket-table" data-testid="ticket-table">
       <thead>
         <tr>
           <th scope="col">ID</th>
@@ -30,9 +30,8 @@ const Table = ({ tickets }) => {
             <td>{formatDate(ticket.updated_at)}</td>
           </tr>
         ))}
-        <tr />
       </tbody>
     </table>
   );
 };
-export default Table;
+export default React.memo(Table);
