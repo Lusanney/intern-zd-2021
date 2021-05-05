@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "nodemon ./bin/index.js",
-    "test": "jest --runInBand --forceExit"
+    "test": "jest --runInBand --silent --forceExit"
   },
   "dependencies": {
     "axios": "^0.21.1",

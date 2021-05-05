@@ -1,0 +1,15 @@
+{
+	"clearMocks": true,
+	"moduleFileExtensions": ["js"],
+	"roots": ["<rootDir>"],
+	"testEnvironment": "node",
+	"reporters": [
+		"default",
+		["./node_modules/jest-html-reporter", {
+			"pageTitle": "Zendesk Intern - Test Report",
+			"dateFormat": "dd-mm-yyyy HH:MM:ss",
+			"outputPath": "./report/test-report.html",
+			"includeFailureMsg": true
+		}]
+	]
+}
