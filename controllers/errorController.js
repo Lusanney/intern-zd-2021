@@ -6,7 +6,7 @@
  * @param {*} err Instance of AppError
  * @param {*} res Instance of Response of ExpressJS
  */
-const sendErrorDev = (err, res) => {
+const sendError = (err, res) => {
   res.status(err.statusCode).json({
     status: err.status,
     message: err.message,
@@ -29,5 +29,5 @@ module.exports = (error, req, res, next) => {
   error.status = error.status || "error";
 
   console.log(error);
-  sendErrorDev(error, res);
+  sendError(error, res);
 };

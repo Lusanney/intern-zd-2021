@@ -7,7 +7,7 @@ const TicketTable = () => {
   const [getTickets, setTickets] = useState([]);
   const [getCurrentPage, setCurrentPage] = useState(1);
   const [getLastPage, setLastPage] = useState(1);
-  const perPage = 25;
+  const perPage = 10;
 
   useEffect(() => {
     getAllTicketsAPI(perPage, getCurrentPage)

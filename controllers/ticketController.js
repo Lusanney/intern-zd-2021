@@ -3,6 +3,8 @@ const { StatusCodes } = require("http-status-codes");
 const catchAsync = require("../utils/catchAsync");
 
 exports.getAllTicket = catchAsync(async (req, res, next) => {
+  // Filtering tickets that are negative or float
+  
   const response = await getAllTicketsAPI(req.query.perPage, req.query.page);
 
   res.status(StatusCodes.OK).json(response.data);
