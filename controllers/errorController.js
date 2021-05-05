@@ -17,7 +17,6 @@ const sendError = (err, res) => {
 module.exports = (error, req, res, next) => {
   // If is not defined, take a default value
   error.statusCode = error.statusCode || 500;
-  error.status = error.status || "error";
 
   console.log(error);
   sendError(error, res);

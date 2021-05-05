@@ -1,11 +1,11 @@
 const { StatusCodes } = require("http-status-codes");
 const supertest = require("supertest");
-const app = require("../../app");
+const app = require("../app");
 
 const request = supertest(app);
 
 describe("Testing global app", () => {
-    it("[Error] Unknown route, Should return NOT FOUND", () => {
+    it("[Error] Unknown route, Should return NOT FOUND", async () => {
         const URL = '/api/v2/';
         expect.hasAssertions();
 
