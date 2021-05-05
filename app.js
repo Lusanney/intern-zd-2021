@@ -5,7 +5,7 @@ var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 
 const ticketRouter = require("./routes/ticketRoute");
-const globalErrorHandler = require('./controllers/errorController');
+const globalErrorHandler = require("./controllers/errorController");
 
 var app = express();
 
@@ -19,7 +19,7 @@ app.use("/api/v1/tickets", ticketRouter);
 
 /* -------------ERROR HANDLERS MIDDLEWARE---------------*/
 // If not handle by other router, implement 404 Router
-app.all('*', (req, res, next) => {
+app.all("*", (req, res, next) => {
   /* NOTE Express will assume anything inside next() as an error
 	it will skip all middlewares in middleware statck, and Handling with
 	global error handler */

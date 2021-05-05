@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getTicketByIdAPI } from '../../apis/ticket.api';
+import { formatDate, badgeBg } from '../../utils';
 
 const TicketDetail = () => {
   const { ticketId } = useParams();
@@ -22,29 +23,32 @@ const TicketDetail = () => {
       </div>
 
       <div className="row">
-        <div className="col">
+        <div className="col-md-4">
           <div className="requester-group-badge">
             Requester:
             {' '}
             {getTicket.requester_id}
+            <span className={`badge rounded-pill ms-3 px-4 ${badgeBg(getTicket.status)}`}>
+              {getTicket.status}
+            </span>
           </div>
-          <div className="status-badge">
-            Status:
-            {' '}
-            {getTicket.status}
-          </div>
+          <div className="status-badge" />
+
         </div>
 
         <div className="col">
           Created:
           {' '}
-          {getTicket.created_at}
+          {formatDate(getTicket.created_at)}
         </div>
       </div>
 
       <div className="row mt-3">
-        <label>Description</label>
-        <p>{getTicket.description}</p>
+        <div className="col-6">
+          <b>Description</b>
+          <p style={{ textJustify: 'auto' }}>{getTicket.description}</p>
+        </div>
+
       </div>
 
     </section>
