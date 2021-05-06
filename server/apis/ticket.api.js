@@ -1,8 +1,9 @@
 const axios = require("axios");
+const {ZENDESK_URL, ZENDESK_EMAIL, ZENDESK_PASSWORD} = require('../config');
 
-const email = "lusanney@gmail.com";
-const password = "Quangvan2701";
-const URL = "https://lusanney.zendesk.com/api/v2/tickets";
+const email = ZENDESK_EMAIL;
+const password = ZENDESK_PASSWORD;
+const URL = `${ZENDESK_URL}/api/v2/tickets`;
 
 exports.getAllTicketsAPI = async (perPage = 25, page = 1) => {
   const response = await axios.get(URL, {
