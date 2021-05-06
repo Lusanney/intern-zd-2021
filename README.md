@@ -18,6 +18,8 @@ This project is built by ReactJS (client) + ExpressJS (server). In the productio
 - Testing: Jest (ServerSide) and Testing-Library (ReactJS)
 
 ## Installation
+Here is the YouTube video I made myself for installation guidelines. Would be helpful in some cases.  
+Link: https://youtu.be/B9QZNm2XWDc
 
 ### 1. Prerequisites
 You need to install NodeJS and NPM / Yarn node package manager.
