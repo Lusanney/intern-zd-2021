@@ -8,7 +8,7 @@ const NotFoundPage = () => (
     <h2>
       Please go back to Dashboard with the link:
 
-      <Link to="/dashboard" className="ms-3 btn btn-outline-primary" data-testid="go-dashboard">Dashboard</Link>
+      <Link to="/" className="ms-3 btn btn-outline-primary" data-testid="go-dashboard">Dashboard</Link>
     </h2>
   </section>
 );

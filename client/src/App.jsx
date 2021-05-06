@@ -5,8 +5,8 @@ import {
   Route,
 } from 'react-router-dom';
 
-import Dashboard from './pages/Dashboard/Dashboard';
-import TicketDetail from './pages/TicketDetail/TicketDetail';
+import Dashboard from './pages/Dashboard';
+import TicketDetail from './pages/TicketDetail';
 import Navbar from './components/Navbar';
 import NotFoundPage from './pages/Error/404';
 
@@ -18,12 +18,12 @@ function App() {
         <div className="container">
 
           <Switch>
-            <Route path="/dashboard">
-              <Dashboard />
+            <Route path="/ticket/:ticketId" exact>
+              <TicketDetail />
             </Route>
 
-            <Route path="/ticket/:ticketId">
-              <TicketDetail />
+            <Route path="/" exact>
+              <Dashboard />
             </Route>
 
             <Route path="*">

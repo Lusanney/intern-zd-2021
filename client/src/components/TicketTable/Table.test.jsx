@@ -20,7 +20,7 @@ test('HAPPY PATH: on TicketTable render, should render 7 records', () => {
   expect(screen.getByTestId('ticket-table').rows).toHaveLength(8);
 });
 
-test('HAPPY PATH: on TicketTable render with no record', () => {
+test('HAPPY PATH: on TicketTable render with no record, should render 0 record', () => {
   render(
     <Table tickets={[]} />,
   );

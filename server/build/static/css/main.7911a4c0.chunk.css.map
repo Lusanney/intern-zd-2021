@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/components/TicketTable/Table.css"],"names":[],"mappings":"AAAA,uBACE,cACF","file":"main.7911a4c0.chunk.css","sourcesContent":[".ticket-table tbody tr {\r\n  cursor: pointer;\r\n}\r\n"]}

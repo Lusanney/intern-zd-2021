@@ -20,9 +20,14 @@ app.use("/api/v1/tickets", ticketRouter);
 
 /* -------------ERROR HANDLERS MIDDLEWARE---------------*/
 // If not handle by other router, implement 404 Router
-app.all("*", (req, res, next) => {
+app.get("/*", function (req, res) {
+  console.log(path.join(__dirname, "build", "index.html"));
   res.sendFile(path.join(__dirname, "build", "index.html"));
 });
+
+// app.get("/*", function (req, res) {
+//   res.sendFile(path.join(__dirname, "build", "index.html"));
+// });
 
 // Error Middleware Handler
 app.use(globalErrorHandler);
