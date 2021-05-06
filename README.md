@@ -25,8 +25,14 @@ You need to install NodeJS and NPM / Yarn node package manager.
 Link: https://nodejs.org/en/download/  
 
 ### 2. Download / Clone this repository
+Clone the project
 ```
 $ git clone https://github.com/Lusanney/zendesk-intern-2021.git
+```
+
+Navigate to the project
+```
+$ cd zendesk-intern-2021
 ```
 ### 3. Running Production App (Recommended) 
 
