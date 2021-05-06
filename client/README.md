@@ -1,7 +1,7 @@
 # Client-side App
 
 ## Installation & Run
-Please see project's outer README.md
+Please see outer [README.md](../README.md)
 
 ## Code Pattern
 ### 1. Pattern  

@@ -2,7 +2,7 @@
 
 The server app is for fetching Zendesk API, and send back to the client (ReactJS). It does some validation and error managment. However, the features are limited to API call to Zendesk.
 ## Installation & Run
-Please see outer README.md
+Please see outer [README.md](../README.md)
 
 ## Code Pattern & Key Notes
 ### 1. Pattern

@@ -18,17 +18,21 @@ This project is built by ReactJS (client) + ExpressJS (server). In the productio
 - Testing: Jest (ServerSide) and Testing-Library (ReactJS)
 
 ## Installation
-### 1. Running Production App (Recommended) 
-Firstly, you need to install NodeJS and NPM / Yarn node package manager.
-Link: https://nodejs.org/en/download/  
 
-Secondly, install dependencies in the server-side
+### 1. Prerequisites
+You need to install NodeJS and NPM / Yarn node package manager.
+
+Link: https://nodejs.org/en/download/  
+### 2. Running Production App (Recommended) 
+
+
+Firstly, install dependencies in the server-side
 ```
 $ cd server
 $ npm install
 ```
 
-Thirdly, run the web application
+Secondly, run the web application
 ```
 $ npm start
 ```
@@ -68,6 +72,17 @@ Finally, open your browser & enjoy the project at the URL
 http://localhost:3000/
 ```
 
+### 3. Testing the Apps
+Server and Client are written with test cases. In order to run tests for each, navigate to the folder and run.
+```
+# Running Server API Tests
+$ cd server
+$ npm test
+
+# Running Client UI Tests
+$ cd client
+$ npm test
+```
 ## Usage & Walkthrough
 
 ### 1. Usage
@@ -113,4 +128,4 @@ Because of the context of the internship challenge, as well as the timeframe and
 However, checking with Zendesk developer, Zendesk right now doesn't support it. My alternative is to store all `requester_id` into a **HashMap** data structure. This helps to avoid duplications API call. For example, rather than fetching `requester_id = 22` for 50 times, we just fetch once.
 - **Authentication**. Authentication is a module that is doable but takes much effort, and not a requirement. The application only fetch API from lusanney.zendesk.com.
 
-## Please see Client & Server README.MD to understand about code pattern.
+## Please see Client & Server README to understand about code pattern.
