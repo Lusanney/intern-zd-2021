@@ -23,7 +23,12 @@ This project is built by ReactJS (client) + ExpressJS (server). In the productio
 You need to install NodeJS and NPM / Yarn node package manager.
 
 Link: https://nodejs.org/en/download/  
-### 2. Running Production App (Recommended) 
+
+### 2. Download / Clone this repository
+```
+$ git clone https://github.com/Lusanney/zendesk-intern-2021.git
+```
+### 3. Running Production App (Recommended) 
 
 
 Firstly, install dependencies in the server-side
@@ -42,7 +47,7 @@ Finally, open your browser & enjoy the project journey at the URL
 http://localhost:5000/
 ```
 
-### 2. Running in Development App  
+### 4. Running in Development App  
 If you want to run Client-app separately (as a development environment), you could achieve this by running both Server app and Client app as the same time. This could happen because, as a development environment, ReactJS is served by react-scripts static server.
 
 Firstly, install dependencies on both server-side and client-side
@@ -72,7 +77,7 @@ Finally, open your browser & enjoy the project at the URL
 http://localhost:3000/
 ```
 
-### 3. Testing the Apps
+### 5. Testing the Apps
 Server and Client are written with test cases. In order to run tests for each, navigate to the folder and run.
 ```
 # Running Server API Tests
