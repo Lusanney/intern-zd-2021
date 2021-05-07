@@ -20,6 +20,6 @@
     "react/prop-types": "off",
     "no-plusplus": "off",
     "no-continue": "off",
-    "linebreak-style": ["error", "windows"]
+    "linebreak-style": "off"
   }
 }

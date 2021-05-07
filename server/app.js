@@ -6,6 +6,7 @@ var logger = require("morgan");
 // Load all configs
 require("./config");
 
+// Routes
 const ticketRouter = require("./routes/ticketRoute");
 const globalErrorHandler = require("./controllers/errorController");
 

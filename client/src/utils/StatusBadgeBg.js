@@ -9,8 +9,7 @@ const StatusBadgeBg = {
 
 /**
  * Translate ticket status to Bootstrap color classname
- * @param {string} status 
- * @returns 
+ * @param {string} status
  */
 const badgeBg = (status) => StatusBadgeBg[status];
 

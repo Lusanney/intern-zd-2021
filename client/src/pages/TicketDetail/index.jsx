@@ -6,7 +6,6 @@ import TicketDetailView from './TicketDetail.view';
 
 /**
  * TicketDetail page, where showing Ticket details
- * @returns 
  */
 const TicketDetail = () => {
   // Id of the ticket based on URL

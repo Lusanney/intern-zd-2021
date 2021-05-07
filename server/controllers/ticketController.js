@@ -11,6 +11,9 @@ const validateIntField = (field) => {
   return true;
 };
 
+/**
+ * Get all tickets available which can be filtered by "page" or "perPage" params
+ */
 exports.getAllTicket = catchAsync(async (req, res, next) => {
   // Filtering tickets that are negative or float
   const perPage = req.query.perPage;
@@ -33,6 +36,9 @@ exports.getAllTicket = catchAsync(async (req, res, next) => {
   res.status(StatusCodes.OK).json(response.data);
 });
 
+/**
+ * Get ticket by its ID
+ */
 exports.getTicketById = catchAsync(async (req, res, next) => {
   const ticketId = req.params.id;
 

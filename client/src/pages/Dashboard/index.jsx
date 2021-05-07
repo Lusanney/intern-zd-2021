@@ -3,7 +3,6 @@ import TicketTable from '../../components/TicketTable';
 
 /**
  * Dashboard page, where showing ticket tables
- * @returns 
  */
 const Dashboard = () => (
   <section className="Dashboard mt-5">

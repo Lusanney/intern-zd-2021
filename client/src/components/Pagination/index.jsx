@@ -6,7 +6,6 @@ import React from 'react';
  * Pagination Component
  */
 const Pagination = ({ currentPage, lastPage, onPageClick }) => {
-
   // Calculating the list of page numbers button to be visible
   const pageButtons = [];
   for (let idx = currentPage - 2; idx <= currentPage + 2 && idx <= lastPage; idx++) {
