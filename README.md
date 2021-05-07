@@ -34,7 +34,7 @@ $ git clone https://github.com/Lusanney/zendesk-intern-2021.git
 
 Navigate to the project
 ```
-$ cd zendesk-intern-2021
+$ cd intern-zd-2021
 ```
 ### 3. Running Production App (Recommended) 
 
