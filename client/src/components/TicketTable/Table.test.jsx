@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import React from 'react';
-import Table from './Table';
+import Table from './Table.view';
 import mockTickets from './mockTickets.json';
 
 test('HAPPY PATH: on TicketTable render, should render a table', () => {

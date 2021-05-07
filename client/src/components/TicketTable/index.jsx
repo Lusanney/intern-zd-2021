@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { getAllTicketsAPI } from '../../apis/ticket.api';
-import Table from './Table';
+import Table from './Table.view';
 import Pagination from '../Pagination';
 import ErrorBoundary from '../ErrorBoundary';
 
+/**
+ * TicketTable shows the table with tickets
+ */
 const TicketTable = () => {
   const [getTickets, setTickets] = useState([]);
   const [getCurrentPage, setCurrentPage] = useState(1);

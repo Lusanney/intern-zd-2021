@@ -44,3 +44,6 @@ As it is not a requirement to make authentication module for Zendesk Intern proj
 ```
 
 This approach in this context of internship challenge, is appropriate and time savings. However, in production & commercial-ready app. This would be a security issue, and hackers could exploit. The alternative is authenticated with OAuth2.0, put sensitive data to `.env` and send the token to client via `cookies [httpOnly, secure]`.
+
+### 5. Testing
+Testing is based on API testing by creating a virtual http server with the help of `supertest` & `jest` library. See folder `/test` to see all the tests

@@ -3,7 +3,7 @@ import './Table.css';
 import { useHistory } from 'react-router-dom';
 import { formatDate, badgeBg } from '../../utils';
 
-const Table = ({ tickets }) => {
+const TicketTableView = ({ tickets }) => {
   const history = useHistory();
   return (
     <table className="table table-hover ticket-table" data-testid="ticket-table">
@@ -34,4 +34,4 @@ const Table = ({ tickets }) => {
     </table>
   );
 };
-export default React.memo(Table);
+export default React.memo(TicketTableView);
