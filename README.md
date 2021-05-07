@@ -29,7 +29,7 @@ Link: https://nodejs.org/en/download/
 ### 2. Download / Clone this repository
 Clone the project
 ```
-$ git clone https://github.com/Lusanney/zendesk-intern-2021.git
+$ git clone https://github.com/Lusanney/intern-zd-2021.git
 ```
 
 Navigate to the project
