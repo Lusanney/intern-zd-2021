@@ -109,8 +109,8 @@ The application consists of 2 main pages that are **Dashboard**, and **Ticket De
 - Dash board shows the table with 25 records, and a pagination.
 - Page through each page to see the changes.
 - Click one of the row, to see the details of a ticket.
-- Tried different ticket with different id URL: `/ticket/:id`, such as `/ticket/2`, and possibly `/ticket/500` to see error handling.
-- Tried any unknown URL, to see the app handle 404 NOT FOUND.
+- Try different ticket with different id URL: `/ticket/:id`, such as `/ticket/2`, and possibly `/ticket/500` to see the error handling.
+- Try any unknown URL, to see the app handles 404 NOT FOUND.
 
 ## Why I use this tech stack ?
 My tech background and skills are developed at best with Java and JavaScript. I have 1+ year self-practiced with JavaScript & Web Development throughout University. So that, I choose JavaScript and browser-based to make this project, as its simplisticity, fast and extreme lightweight. Here is my judgement on the framework / library that I use.
