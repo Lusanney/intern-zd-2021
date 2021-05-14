@@ -4,9 +4,15 @@ import { getTicketByIdAPI } from '../../apis/ticket.api';
 import ErrorBoundary from '../../components/ErrorBoundary';
 import TicketDetailView from './TicketDetail.view';
 
+/**
+ * TicketDetail page, where showing Ticket details
+ */
 const TicketDetail = () => {
+  // Id of the ticket based on URL
   const { ticketId } = useParams();
   const [getTicket, setTicket] = useState({});
+
+  // Loading state
   const [getLoading, setLoading] = useState(true);
 
   useEffect(() => {

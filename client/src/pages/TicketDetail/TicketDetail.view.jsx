@@ -2,6 +2,10 @@ import React from 'react';
 import { formatDate, badgeBg } from '../../utils';
 import TicketEmpty from './TicketEmpty.view';
 
+/**
+ * TicketDetail view, shows all the ticket details when
+ * ticket data is not empty
+ */
 const TicketDetailView = ({ ticket, isLoading }) => {
   const isTicketFound = Object.keys(ticket).length !== 0;
 

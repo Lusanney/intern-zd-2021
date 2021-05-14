@@ -1,6 +1,9 @@
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
 
+/**
+ * Wrapper class to catch application error
+ */
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -13,13 +16,13 @@ class ErrorBoundary extends React.Component {
   }
 
   componentDidCatch(error, errorInfo) {
-    // You can also log the error to an error reporting service
+    // log error if caught
     console.error(error, errorInfo);
   }
 
   render() {
     if (this.state.hasError) {
-      // You can render any custom fallback UI
+      // fallback UI
       return <h1>Something went wrong.</h1>;
     }
 
