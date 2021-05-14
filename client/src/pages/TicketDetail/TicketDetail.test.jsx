@@ -12,7 +12,7 @@ test('HAPPY PATH: on TicketDetail render with a valid Ticket, should render all 
   expect(screen.getByTestId('ticket-subject')).toHaveTextContent('testing subject');
   expect(screen.getByTestId('ticket-description')).toHaveTextContent('just another description that you might like to read');
   expect(screen.getByTestId('ticket-status')).toHaveTextContent('open');
-  expect(screen.getByTestId('ticket-createdAt')).toHaveTextContent('Created: 05/06/2021, 12:00:00 am');
+  expect(screen.getByTestId('ticket-createdAt')).toHaveTextContent((new Date(mockTicket.created_at)).toLocaleString());
   expect(screen.getByTestId('ticket-requester')).toHaveTextContent('1231112');
 });
 
